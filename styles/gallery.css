@@ -2,7 +2,6 @@ header {
   text-align: center;
 }
 .image-container {
-  height: 400px;
   margin-bottom: 5px;
 }
 .image-container img {
@@ -28,4 +27,25 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
+}
+@media screen and (max-width: 576px) {
+  .images-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .images-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+  .first-image {
+    height: 50%;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 577px) {
+  .image-container {
+    height: 400px;
+  }
 }
